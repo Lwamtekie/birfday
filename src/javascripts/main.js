@@ -7,7 +7,7 @@ import 'bootstrap';
 
 
 const init = () => {
-  firebase.initializeApp(apiKeys.firebasekeys);
+  firebase.initializeApp(apiKeys.firebaseKeys);
   Auth.authStringBuilder();
   birfday.birfdayStringBuilder();
 };
