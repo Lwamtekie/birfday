@@ -9,11 +9,13 @@ const signMeIn = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().signInWithPopup(provider);
 };
+
 const authStringBuilder = () => {
-  let domString = '<button id="google-auth" class= "btn btn-danger">';
-  domString += `<img src=${googleImage}/>`;
+  let domString = '<button id="google-auth" class="btn btn-danger">';
+  domString += `<img src=${googleImage} />`;
   domString += '</button>';
   util.printToDom('auth', domString);
   document.getElementById('google-auth').addEventListener('click', signMeIn);
 };
+
 export default { authStringBuilder };
