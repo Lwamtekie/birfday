@@ -1,13 +1,16 @@
 @import "~bootstrap/scss/bootstrap";
 body {
   background-color: lightgoldenrodyellow;
+  
 }
 
 img{
   height: 70px;
     vertical-align: middle;
     border-style: none;
-    border: greenyellow;
+   border: double;
+    margin-top: 2rem; 
+   
 }
 
 .hide {
