@@ -3,7 +3,10 @@ import axios from 'axios';
 import apiKeys from '../apiKeys.json';
 
 const firebaseUrl = apiKeys.firebaseKeys.databaseURL;
+
 const addNewFriend = friendObject => axios.post(`${firebaseUrl}/friends.json`, friendObject);
+
+const deleteFriend = friendsId => axios.delete(`${firebaseUrl}/friends/${friendsId}.json`);
 
 
 const getFriendsByUid = uid => new Promise((resolve, reject) => {
@@ -20,4 +23,4 @@ const getFriendsByUid = uid => new Promise((resolve, reject) => {
     .catch(err => reject(err));
 });
 
-export default { addNewFriend, getFriendsByUid };
+export default { addNewFriend, getFriendsByUid, deleteFriend };
