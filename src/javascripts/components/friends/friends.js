@@ -31,4 +31,13 @@ const showFriends = () => {
   document.getElementById('add-friend-button').addEventListener('click', newFriendButton);
 };
 
-export default { showFriends };
+const getFriends = (uid) => {
+  friendsData.getFriendsByUid(uid)
+    .then((friends) => {
+      console.error('friends array', friends);
+      showFriends(friends);
+    })
+    .catch(err => console.error('no friends', err));
+};
+
+export default { getFriends };
